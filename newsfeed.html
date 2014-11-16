@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Format newsfeed</title>
+<script>
+function UpdateScript() {
+   u='';
+   df=document.f;
+   if (df.mi.value!=15) u='?mi='+df.mi.value;
+   if (df.hc.value.length)
+      u=u+(u.length?'&':'?')+'hc='+df.hc.value.replace(' ','+');
+   if (df.hbc.value.length)
+      u=u+(u.length?'&':'?')+'hbc='+df.hbc.value.replace(' ','+');
+   if (df.hbw.value!=0)
+      u=u+(u.length?'&':'?')+'hbw='+df.hbw.value;
+      
+   nw=Number(df.nw[df.nw.selectedIndex].value);
+   if (nw) u=u+(u.length?'&':'?')+'nw='+nw;
+   
+   df.s.value='<'+'script src="http://yourwebsite.com/PHPFile.php'+
+      u+'"></scr'+'ipt>';
+}
+</script>
+</head><body bgcolor="white">
+
+<b>Javascript</b>:<br>
+<form name="f" action="javascript:a=1;" method="post">
+Add this HTML to your web page:<p>
+<textarea name="s" rows="2" cols="80" wrap="virtual">&lt;script
+   src="http://yourwebsite.com/PHPFile.php"&gt;&lt;/script&gt;</textarea><p>
+
+To customize the formatting, use the following form:<br>
+Maximum items to display:
+   <input name="mi" size="3" value="15" onKeyUp="UpdateScript();"><br>
+Headline display:<br>
+   &nbsp;&nbsp;&nbsp;CSS class for link:
+      <input name="hc" size="10" onKeyUp="UpdateScript();">
+      (optional - defined in your stylesheet)<br>
+   &nbsp;&nbsp;&nbsp;CSS class for box surrounding headline:
+      <input name="hbc" size="10" onKeyUp="UpdateScript();">
+      (optional - defined in your stylesheet)<br>
+   &nbsp;&nbsp;&nbsp;Width of box surrounding headline:
+      <input name="hbw" size="4" onKeyUp="UpdateScript();">
+      (optional)<br>
+When user clicks headline, follow link in:
+   <select name="nw" onchange="UpdateScript();">
+   <option selected value="0">the current browser window
+      (and frame, if applicable)
+   <option value="1">a new window
+   <option value="2">the top frame of current browser window
+   </select>
+</form><p>
+
+<b>RSS</b>:<br>
+The address of the RSS newsfeed is http://kellfamily1/~mtkell/headlines.rdf
+
+</body>
+</html>
+

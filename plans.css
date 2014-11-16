@@ -1,0 +1,500 @@
+
+body {
+  background-color: #FFCC33;  
+  font-family: arial;
+}
+
+body.event_details_body {
+  background-color: #FFCC33;  
+  font-family: arial;
+}
+
+a:link { color: #0000ff; text-decoration: underline}
+a:visited { color: #551a8b; text-decoration: underline}
+a:hover { color: #0000aa; text-decoration: underline}
+
+a.info_box_tab {
+  color:#0000ff;
+  border-style:solid;
+  border-color:#000000;
+  background-color:#eeeeee;
+  border-width:1px;
+  border-bottom-width:0px;
+  padding: 2px 1em 2px 1em;
+  position: relative;
+  /*top:-1px; */          /* This may be needed to make the info box tabs look perfectly.  Depends on the browser */
+  z-index: 100;
+}
+
+a.info_box_tab.active {
+  color:#0000ff;
+  background-color:#ffffff;
+  position:relative;
+  z-index: 102;
+}
+
+a.event_link {    /* used for event label link */
+  color:#0000ff;      
+  font-weight:normal;
+  font-size:x-small;
+}
+a.event_link:hover {    /* used for event label link */
+  color:#0000aa;      
+}
+
+
+optgroup {
+ color:#888888;
+ font-weight:normal;
+ font-style:normal;
+ font-size:x-small;
+}
+
+option {
+ color:#000000;
+ font-weight:normal;
+ font-size:small;
+}
+
+/* the dropdownmenu styles are not currently used.  They're reserved for 
+javascript dropdown menus, if those ever become a reality */
+
+div.dropdownmenu {
+  position:absolute;
+  width:165px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b2b2b2 #4a494a #4a494a #b2b2b2;
+  background-color:#ffffff;
+  font-family:arial;
+  line-height:20px;
+  cursor:default;
+  font-size:14px;
+  visibility:hidden;
+}
+
+div.dropdown_menuitem {
+  padding-left:5px;
+  color:#000000;
+  font-size:14px;
+}
+
+div.dropdown_menuitem_highlight {
+  padding-left:5px;
+  color:#ffffff;
+  background-color:#08246b;
+}
+
+/* the contextmenu styles *are* used.  They're for the right-click menus*/
+
+div.contextmenu {
+  position:absolute;
+  width:165px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b2b2b2 #4a494a #4a494a #b2b2b2;
+  background-color:#d6d3ce;
+  font-family:arial;
+  line-height:20px;
+  cursor:default;
+  font-size:14px;
+  visibility:hidden;
+}
+
+div.context_menuitem {
+  padding-left:10px;
+  font-size:14px;
+}
+
+div.context_menuitem_highlight {
+  padding-left:10px;
+  color:#ffffff;
+  background-color:#08246b;
+}
+
+div.selected_org_box {
+  border-style:solid;
+  border-width:1px; 
+  border-color:#d33708; 
+}
+
+div.shared_org_box {
+  border-style:solid;
+  border-width:1px; 
+  border-color:#000000; 
+}
+
+.info_box {                   /* used for lots of things */
+  background-color:#ffffff;   
+  padding:5px;
+  margin:0px;
+  border-style:solid;         /* this must be present for the other border properties to work */
+  border-width:1px;
+  border-color:#000000;
+  color:#000000;             /* color for text inside an info_box */
+}
+
+a.info_box_link {            /* specify a link style that will stand out against the info_box background */
+  color:#0000ff;             
+}
+
+a.info_box_link:hover {      /* specify a link style that will stand out against the info_box background */
+  color:#551a8b;            
+}
+
+a.info_box_link:visited {      /* specify a link style that will stand out against the info_box background */
+  color:#0000aa;            
+}
+
+form {
+  margin-bottom:0;
+  margin-top:0;
+}
+
+font.error {            /* used for displaying errors */
+  color:#ff0000;        /* red! */
+  font-size:small;
+}
+font.warning {          /* used for displaying warnings */
+  color:#af0000;        /* maroonish red! */
+  font-size:small;
+}
+font.highlight {          /* used for highlighting text */
+  color:#000000;                /* black */
+  background-color:#fffbba;     /* post-it yellow */
+}
+font.required_field {       /* used for required input fields */
+  color:#af0000;            /* maroonish red! */
+  font-weight:bold;
+  font-size:small;
+}
+font.fit_event {            /* used for required input fields */
+  color:#af0000;            /* maroonish red! */
+  font-weight:normal;
+  font-size:x-small;
+}
+font.optional_field {       /* used for optional input fields */
+  color:#000000;            /* black */
+  font-weight:bold;
+  font-size:small;
+}
+font.small_note {           /* used for small notes (no way!) */
+  color:#000000;            /* black */
+  font-weight:normal;
+  font-size:x-small;
+}
+font.this_month {      /* used for dates in this month */
+  color:#0049ff;       
+  font-weight:bold;
+  font-size:small;
+}
+font.other_months {   /* used for dates other than this month */
+  color:#333333;      
+  font-weight:bold;
+  font-size:small;
+}
+font.todays_date {         /* used for today's date */
+  color:#0049ff;                  
+  font-weight:bold;
+  font-size:small;
+}
+font.cal_title {           /* used for calendar title */
+  color:#0049ff;          
+  font-weight:bold;
+  font-size:large;
+}
+font.cal_month_title {    /* used for calendar month title */
+  color:#0049ff;          
+  font-weight:bold;
+  font-size:medium;
+}
+font.list_month_title {   /* used for calendar title */
+  color:#000000;          
+  font-weight:bold;
+  font-size:medium;
+}
+font.cal_cell {           /* used to set the base size for text inside calendar cells */
+  color:#0049df;      
+  font-size:x-small;
+}
+font.day_zoom_title { /* used for calendar title */
+  color:#0049df;      
+  font-weight:bold;
+  font-size:medium;
+}
+font.day_zoom_org {   /* used for calendar organization name */
+  color:#0049df;      
+  font-weight:bold;
+  font-size:x-small;
+}
+font.day_zoom_date {  /* used for calendar organization name */
+  color:#000000;     
+  font-weight:bold;
+  font-size:small;
+}
+font.date {           /* font for dates */
+  font-weight:normal;
+  font-style:normal;
+}
+
+font.day_names {
+  color:#000000;      
+  font-weight:bold;
+  font-size:small;
+  font-style:italic;
+}
+
+.active_tab {    /* used for the background for the active tab */
+  background-color:#fff7de;   /* active tab bg */
+  border-style:solid;         /* this must be present for the other border properties to work */
+  border-width:1px;
+  border-color: #ffe394;      /* active_tab bg border*/
+  padding:5px;
+}
+a.active_tab_link {           /* specify a link style that will stand out against the active tab background */
+  color:#0000ff;             
+}
+a.active_tab_link:hover {      /* specify a link style that will stand out against the active tab background */
+  color:#551a8b;            
+}
+a.active_tab_visited:visited { /* specify a link style that will stand out against the active tab background */
+  color:#0000aa;          
+}
+font.active_tab_text {              /* specify a font that will stand out against the active tab background */
+  color:#000000;          
+}
+
+
+.inactive_tab {              /* the following td.definitions are simply for looking cool */
+  background-color:#ffebc3;   /* active tab bg */
+  border-style:solid;         /* this must be present for the other border properties to work */
+  border-width:1px;
+  border-color: #f3e0bd;      /* active_tab bg border*/
+  padding:5px;
+}
+a.inactive_tab_link {           /* specify a link style that will stand out against the active tab background */
+  color:#0000ff;             
+}
+a.inactive_tab_link:hover {      /* specify a link style that will stand out against the active tab background */
+  color:#551a8b;            
+}
+a.inactive_tab_visited:visited { /* specify a link style that will stand out against the active tab background */
+  color:#0000aa;          
+}
+
+td.icon_preview_box {            /* used for day zoom details box (below title) */
+  background-color:#ffffff;   
+  padding:3px;
+  border-style:solid;         /* this must be present for the other border properties to work */
+  border-width:1px;
+  border-color:#000000;  
+}
+
+td.day_names {                /* used for Sunday, Monday, etc.*/
+  background-color:transparent;
+  border-style:solid;         
+  border-width:0px;
+  border-color: #000000;    
+  margin:0px;
+  width:100px;                /* this line makes each calendar cell at least a certain width */
+}
+
+td.day_names_vert_border {     /* this controls if there are boxes around day names */
+  background-color: transparent;
+  border-style:solid;         
+  border-width:0px;
+  width:1px;
+  padding:0px;
+  margin:0px;
+}
+
+td.cal_cell_vert_border {
+  background-color: #000000;
+  border-style:solid;         /* this must be present for the other border properties to work */
+  border-width:0px;
+  width:1px;
+  padding:0px;
+  margin:0px;
+}
+
+td.cal_cell_horiz_border {
+  background-color: #000000;
+  border-style:solid;         /* this must be present for the other border properties to work */
+  border-width:0px;
+  height:1px;
+  padding:0px;
+  margin:0px;
+}
+
+td.day_plain {               /* used for plain (blank) calendar cells*/
+  background-color: #ffffff;
+  border-style:solid;        /* this must be present for the other border properties to work */
+  border-width:0px;
+  border-color: #000000;
+  padding:2px;
+}
+
+td.today {                          /* used for today's date */
+  background-color: #ffffff;
+}
+
+td.cell_bottom {               /* used for calendar cell bottoms */
+  height: 3px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+div.today_top {                     /* this can be used to put some image on today's date (like a circle around the date) */
+  background-color: transparent;
+  /* background-image:url(graphics/date_circle.gif) !important; */
+  background-repeat:no-repeat;
+}
+
+
+td.other_month {               /* used for calendar days in months before & after the current month */
+}
+
+
+td.event_slot {               /* this surrounds each event box on the calendar */
+  border-style:solid;         /* this must be present for the other border properties to work */
+  background-color:#ffffff;
+  border-width:0px;
+  border-color: #000000;
+  padding:0px;
+  margin:0px;
+}
+
+table.layout_table {      /* used for invisible tables */
+  background-color:transparent;  
+  padding:0px;
+  margin:0px;
+  border-style:solid;      /*this must be present for the other border properties to work */
+  border-width:0px;
+  border-color:transparent;  
+}
+
+/**************** print styles ************************/
+
+@media print {
+
+/* for printing, all backgrounds should be light, all text & borders should be dark.  */
+/* ideally, black & white.  */
+
+/* set all fonts to black */
+font {
+  color:#000000 !important;            
+}
+
+/* set all links to black */
+a:link { color: #000000 !important; text-decoration: underline}
+a:visited { color: #000000 !important; text-decoration: underline}
+a.event_link {    /* used for event label link */
+  font-weight:normal;
+  font-size:6pt;
+}
+
+
+body {
+  background-color: #ffffff;  
+  /*background-image:url(http://some.url.org/some_image.gif); */  /* uncomment and modify this line to add a background image */
+    font-family: arial;
+  background-image:none;
+}
+
+
+
+.active_tab {    /* used for the background for the active tab */
+  background-color:#ffffff;   /* active tab bg */
+  border-style:solid;         /* this must be present for the other border properties to work */
+  border-width:1px;
+  border-color: #000000;      /* active_tab bg border*/
+  padding:5px;
+  background-image:none;
+}
+
+
+.inactive_tab {              /* the following td.definitions are simply for looking cool */
+  background-color:#dddddd;   /* active tab bg */
+  border-style:solid;         /* this must be present for the other border properties to work */
+  border-width:1px;
+  border-color: #000000;      /* active_tab bg border*/
+  padding:5px;
+  background-image:none;
+}
+
+
+td.cal_cell_vert_border {
+  background-color: #000000;
+  border-style:solid;         /* this must be present for the other border properties to work */
+  border-width:0px;
+  width:1px;
+  padding:0px;
+  margin:0px;
+}
+
+td.cal_cell_horiz_border {
+  background-color: #000000;
+  border-style:solid;         /* this must be present for the other border properties to work */
+  border-width:0px;
+  height:1px;
+  padding:0px;
+  margin:0px;
+}
+
+td.day_plain {               /* used for plain (blank) calendar cells*/
+  background-color: #ffffff;
+  border-style:solid;        /* this must be present for the other border properties to work */
+  border-width:0px;
+  border-color: #000000;
+  padding:2px;
+  background-image:none;
+}
+
+td.today {                          /* used for today's date */
+  background-color: #ffffff;
+  background-image:none !important;
+}
+
+td.cell_bottom {               /* used for calendar cell bottoms */
+  height: 3px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+div.today_top {                     /* this can be used to put some image on today's date (like a circle around the date) */
+  background-color: transparent;
+  /* background-image:url(graphics/date_circle.gif) !important; */
+  background-repeat:no-repeat;
+}
+
+
+td.other_month {               /* used for calendar days in months before & after the current month */
+  background-image:none !important;
+}
+
+
+td.event_slot {               /* this surrounds each event box on the calendar */
+  border-style:solid;         /* this must be present for the other border properties to work */
+  background-color:#ffffff;
+  border-width:0px;
+  border-color: #000000;
+  padding:0px;
+  margin:0px;
+  background-image:none;
+}
+
+
+td.day_names {                /* used for Sunday, Monday, etc.*/
+  background-color:transparent;
+  border-style:solid;         
+  border-width:0px;
+  border-color: #000000;    
+  margin:0px;
+  width:.8in;                /* this line makes each calendar cell at least a certain width */
+}
+
+
+
+
+
+}
